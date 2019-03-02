@@ -11,7 +11,7 @@
             gtag('config', 'UA-135440618-1');
         </script>
         <script>
-            window.onload = function() {
+            document.addEventListener("DOMContentLoaded", function(event) {
                 function changeGreetingText(mq) {
                     if (mq.matches) {
                         document.getElementById("greet").innerText = "Hi!";
@@ -19,11 +19,10 @@
                         document.getElementById("greet").innerText = "Hello there!";
                     }
                 }
-
                 var mq = window.matchMedia("(max-width: 690px)");
                 changeGreetingText(mq);
                 mq.addListener(changeGreetingText);
-            }
+            });
         </script>
         <title>Andri Bergsson</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
