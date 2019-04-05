@@ -89,6 +89,9 @@
         clippy.load('Clippy', function(agent) {
             // Do anything with the loaded agent
             agent.show();
+            setInterval(function() {
+                agent.animate();
+            }, 30 * 1000);
         });
     </script>
 </html>
