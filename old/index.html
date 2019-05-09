@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135440618-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-135440618-1');
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                function changeGreetingText(mq) {
+                    if (mq.matches) {
+                        document.getElementById("greet").innerText = "Hi!";
+                    } else {
+                        document.getElementById("greet").innerText = "Hello there!";
+                    }
+                }
+                var mq = window.matchMedia("(max-width: 690px)");
+                changeGreetingText(mq);
+                mq.addListener(changeGreetingText);
+            });
+        </script>
+        <title>Andri Bergsson</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="dist/styles/clippy.css" media="all">
+        <link rel="icon" type="image/png" href="dist/assets/icons8-workstation-48.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <style>
+            html, body, pre, code, kbd, samp {
+                font-family: "Press Start 2P";
+            }
+            @media only screen and (max-width: 690px) {
+                div.nes-container {
+                    width: 90% !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a class="nes-btn" href="index" style="text-decoration: none">home</a>
+        <a class="nes-btn" href="cv" style="text-decoration: none">CV</a>
+        <br/>
+        <br/>
+        <section class="message-list" style="width: 50%; margin: auto;">
+            <section class="message -left">
+                <img class="nes-avatar is-rounded is-large" alt="image of developer" src="dist/assets/8biticon.jpg" style="image-rendering: pixelated;">
+                <div class="nes-balloon from-left">
+                    <p id="greet">Hello there!</p>
+                </div>
+            </section>
+
+        </section>
+        <br/>
+		<div class="nes-container with-title is-centered" style="width: 50%; margin: auto;">
+			<p class="title">About me</p>
+			<p>My name is Andri Bergsson and I'm a software developer living in Copenhagen. I am currently working at a company called
+                <a href="http://www.enalyzer.com" style="text-decoration: none">
+                    <span class="nes-text is-success">Enalyzer</span>
+                </a>
+                and studying for my MSc degree at the
+                <a href="https://www.dtu.dk/english/education/msc/programmes/mathematical_modelling_and_computation" style="text-decoration: none">
+                    <span class="nes-text is-error">Technical University of Denmark</span>
+                </a>
+            </p>
+		</div>
+        <br/>
+        <section class="icon-list" style="width: 50%; margin: auto;">
+            <a href="https://github.com/andberger" style="text-decoration: none">
+                <i class="nes-icon github is-medium"></i>
+            </a>
+            <a href="mailto:and.bergsson@gmail.com" style="text-decoration: none">
+                <i class="nes-icon gmail is-medium"></i>
+            </a>
+        </section>
+    </body>
+    <!-- jQuery 1.7+ -->
+    <script src="dist/js/jquery-1.7.min.js"></script>
+
+    <!-- Clippy.js -->
+    <script src="dist/js/clippy.min.js"></script>
+
+    <!-- Init script -->
+    <script type="text/javascript">
+        clippy.load('Clippy', function(agent) {
+            // Do anything with the loaded agent
+            agent.show();
+            setInterval(function() {
+                agent.animate();
+            }, 30 * 1000);
+        });
+    </script>
+</html>
