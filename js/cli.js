@@ -18,13 +18,6 @@ const rootPath = 'users/andberger/root'
 const getDirectory = () => localStorage.directory
 const setDirectory = (dir) => { localStorage.directory = dir }
 
-// turn on fullscreen
-const registerFullscreenToggle = () => {
-    $('.button.green').click(() => {
-        $('.terminal-window').toggleClass('fullscreen')
-    })
-}
-
 // create new directory in current directory
 commands.mkdir = () => errors.noWriteAccess
 
