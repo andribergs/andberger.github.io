@@ -1,29 +1,57 @@
-<head>
-    <link rel="stylesheet/less" type="text/css" href="styles/main.less" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.4.3/js/jquery.terminal.js"></script>
-    <script type="text/javascript" src="js/shell.js"></script>
-    <script type="text/javascript" src="js/cli.js"></script>
-</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135440618-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-<body>
+            gtag('config', 'UA-135440618-1');
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                function changeGreetingText(mq) {
+                    if (mq.matches) {
+                        document.getElementById("greet").innerText = "Hi!";
+                    } else {
+                        document.getElementById("greet").innerText = "Hello there!";
+                    }
+                }
+                var mq = window.matchMedia("(max-width: 690px)");
+                changeGreetingText(mq);
+                mq.addListener(changeGreetingText);
+            });
+        </script>
+        <title>Andri Bergsson</title>
+        <link rel="stylesheet/less" type="text/css" href="styles/main.less" />
+        <link rel="icon" type="image/png" href="dist/assets/icons8-workstation-48.png"/>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.4.3/js/jquery.terminal.js"></script>
+        <script type="text/javascript" src="js/shell.js"></script>
+        <script type="text/javascript" src="js/cli.js"></script>
+    </head>
 
-    <div class="terminal-window">
-        <header>
-            <div class="button red"></div>
-            <div class="button yellow"></div>
-            <div class="button green"></div>
-        </header>
-        <div id="terminal">
-            <p><span class="pink">\[._.]/</span> - Welcome to my CLI! type `help` to get started.</p>
-            <p class="hidden">
-            <span class="prompt">
-                <span class="root">root</span>
-                <span class="tick">❯</span>
-            </span>
-            <span contenteditable="true" class="input"></span>
-            </p>
+    <body>
+
+        <div class="terminal-window">
+            <header>
+                <div class="button red"></div>
+                <div class="button yellow"></div>
+                <div class="button green"></div>
+            </header>
+            <div id="terminal">
+                <p><span class="pink">\[._.]/</span> - Welcome to my CLI! type `help` to get started.</p>
+                <p class="hidden">
+                <span class="prompt">
+                    <span class="root">root</span>
+                    <span class="tick">❯</span>
+                </span>
+                <span contenteditable="true" class="input"></span>
+                </p>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
+</html>
