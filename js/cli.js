@@ -96,6 +96,6 @@ $(() => {
 
     $.ajaxSetup({ cache: false })
     $.get('data/system_data.json', (data) => {
-        systemData = JSON.parse(data)
+        systemData = data
     })
 })
