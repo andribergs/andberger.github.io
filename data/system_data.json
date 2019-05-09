@@ -1,7 +1,7 @@
 {
 	"about": "My name is Andri Bergsson and I'm a software developer living in Copenhagen. I'm currently working at a company called <a class='blue' style='display: inline' href='http://www.enalyzer.com'>Enalyzer</a> and studying for my MSc degree in Mathematical Modelling and Computation at the <a class='blue' style='display: inline' href='https://www.dtu.dk/english/education/msc/programmes/mathematical_modelling_and_computation'>Technical University of Denmark</a>.",
 	"contact": "<ul class='contact'><li><a class='blue' target='_blank' href='https://github.com/andberger'>GitHub</a></li><li><a class='blue' target='_blank' href='mailto:and.bergsson@gmail.com'>Gmail</a></li></ul>",
-	"cv": "<a class='blue' target='_blank' href='data/cv.pdf'>Download CV</a>",
+	"cv": "<a class='blue' target='_blank' href='data/cv.pdf'>Curriculum vitae</a>",
 	"root": "<p>about.txt &nbsp&nbsp contact.txt &nbsp&nbsp cv.txt &nbsp&nbsp </p>",
 	"help": "<div> <ul> <li><strong>path</strong> - display current directory</li><li><strong>cat FILENAME</strong> - display FILENAME in window</li><li><strong>cd DIRECTORY</strong> - move into DIRECTORY or just cd to return to root</li><li><strong>ls</strong> - show files in current directory</li><li><strong>history</strong> - see your command history</li><li><strong>clear</strong> - clear current window</ul></div>"
 }
