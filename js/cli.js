@@ -83,7 +83,6 @@ commands.cat = (filename) => {
 
 // initialize cli
 $(() => {
-    registerFullscreenToggle()
     const cmd = document.getElementById('terminal')
     const terminal = new Shell(cmd, commands)
 
