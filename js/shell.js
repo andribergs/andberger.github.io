@@ -6,7 +6,7 @@ class Shell {
         this.setupListeners(term)
         this.term = term
 
-        localStorage.directory = '~'
+        localStorage.directory = 'root'
         localStorage.history = JSON.stringify('')
         localStorage.historyIndex = -1 // Solves undefined command on refreshing the website
         localStorage.inHistory = false // To prevent down arrow traversal when not required
