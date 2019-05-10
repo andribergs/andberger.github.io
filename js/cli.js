@@ -13,7 +13,7 @@ const struct = {
 
 const commands = {}
 let systemData = {}
-const rootPath = 'users/andberger/root'
+const rootPath = '/'
 
 const getDirectory = () => localStorage.directory
 const setDirectory = (dir) => { localStorage.directory = dir }
@@ -60,7 +60,7 @@ commands.cd = (newDirectory) => {
     if (dirs.includes(newDir) && currDir !== newDir) {
         setDirectory(newDir)
     } else if (newDir === '' || newDir === '~' || (newDir === '..' && dirs.includes(currDir))) {
-        setDirectory('root')
+        setDirectory('~')
     } else {
         return errors.invalidDirectory
     }
